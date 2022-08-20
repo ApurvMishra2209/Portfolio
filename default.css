@@ -1,4 +1,4 @@
-:root{
+ :root{
 	--mainColor:#eaeaea;
 	--secondaryColor:#fff;
 
@@ -70,7 +70,9 @@ h6 { font-size: 16px;}
 	overflow:auto;
 }
 
-
+.apurv{
+	background-color: var(--mainColor);
+	}
 
 
 .main-container{
@@ -99,7 +101,7 @@ h6 { font-size: 16px;}
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 
+	grid-template-areas:
 		'nav-wrapper nav-wrapper'
 		'left-column right-column'
 	;
@@ -376,7 +378,7 @@ h6 { font-size: 16px;}
 .input-field{
 	width: 100%;
 	padding-top: 10px;
-	padding-bottom:10px; 
+	padding-bottom:10px;
 	background-color: var(--secondaryColor);
 	border-radius: 5px;
 	border:1px solid var(--borderColor);
@@ -388,7 +390,7 @@ h6 { font-size: 16px;}
 	margin-top: 10px;
 	width: 100%;
 	padding-top: 10px;
-	padding-bottom:10px; 
+	padding-bottom:10px;
 	color: #fff;
 	background-color: var(--buttonColor);
 	border:none;
@@ -404,7 +406,7 @@ h6 { font-size: 16px;}
 @media screen and (max-width: 800px){
 	.intro-wrapper{
 		grid-template-columns: 1fr;
-		grid-template-areas: 
+		grid-template-areas:
 			'nav-wrapper'
 			'left-column'
 			'right-column'
@@ -580,7 +582,7 @@ hr.separator {
     padding: 0;
   }
 
-  .header ul.icon-menu li.icon-box {
+   ul.icon-menu li.icon-box {
     width: 50px;
     height: 50px;
     list-style: none;
@@ -593,37 +595,37 @@ hr.separator {
     background: #2b2a2a;
   }
 
-  .header ul.icon-menu li.icon-box i {
+    ul.icon-menu li.icon-box i {
     color: #ddd;
     font-size: 19px;
     transition: .3s;
   }
 
-  .header ul.icon-menu li.icon-box.active,
+   ul.icon-menu li.icon-box.active,
   .header ul.icon-menu li.icon-box:hover,
   .header ul.icon-menu li.icon-box.active i,
   .header ul.icon-menu li.icon-box:hover i {
     color: #fff;
   }
 
-  .header .icon-box h2 {
+    .icon-box h2 {
     font-size: 15px;
     font-weight: 500;
   }
 
-  .header .icon-box a {
+    .icon-box a {
     display: block;
     padding: 0;
     width: 50px;
     height: 50px;
   }
 
-  .header .icon-box i.fa {
+   .icon-box i.fa {
     position: absolute;
     pointer-events: none;
   }
 
-  .header .icon-menu i {
+    .icon-menu i {
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -633,7 +635,7 @@ hr.separator {
     top: 15px;
   }
 
-  .header .icon-box h2 {
+  .icon-box h2 {
     z-index: -1;
     position: absolute;
     top: 0;
@@ -649,7 +651,7 @@ hr.separator {
     height: 50px;
   }
 
-  .header .icon-box a:hover h2 {
+    .icon-box a:hover h2 {
     opacity: 1;
     right: 27px;
     margin: 0;
@@ -787,19 +789,19 @@ hr.separator {
 
 /* Resume */
 
-.about .resume-box ul {
+ .resume-box ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.about .resume-box li {
+  .resume-box li {
   position: relative;
   padding: 0 20px 0 60px;
   margin: 0 0 50px;
 }
 
-.about .resume-box li:after {
+  .resume-box li:after {
   content: "";
   position: absolute;
   top: 0;
@@ -808,7 +810,7 @@ hr.separator {
   border-left: 1px solid #333;
 }
 
-.about .resume-box .icon {
+  .resume-box .icon {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -819,10 +821,10 @@ hr.separator {
   z-index: 1;
   border-radius: 50%;
   color: #fff;
-  background-color: #252525;
+  background-color: #ffc107;
 }
 
-.about .resume-box .time {
+ .resume-box .time {
   color: #fff;
   font-size: 12px;
   padding: 1px 10px;
@@ -834,18 +836,15 @@ hr.separator {
   opacity: .8;
 }
 
-.about .resume-box h5 {
+  .resume-box h5 {
   font-size: 18px;
   margin: 7px 0 10px;
 }
 
-.about .resume-box p {
-  margin: 0;
-  color: #eee;
-  font-size: 14px;
-}
 
-.about .resume-box .place {
+
+
+  .resume-box .place {
   opacity: .8;
   font-weight: 600;
   font-size: 15px;
@@ -853,7 +852,7 @@ hr.separator {
   padding-left: 26px;
 }
 
-.about .resume-box .place:before {
+  .resume-box .place:before {
   position: absolute;
   content: '';
   width: 10px;
@@ -1838,7 +1837,7 @@ hr.separator {
     padding-bottom: 0;
   }
 
-  .about .resume-box h5 {
+   .resume-box h5 {
     font-size: 17px;
   }
 
