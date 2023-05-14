@@ -511,7 +511,7 @@
 		<a href=""></a>
 		<h3 style="text-align: center;">Get In Touch</h3>
 
-		<form id="contact-form" action="send_email.php" method="POST">
+		<form id="contact-form" >
 			<a name="contact"></a>
 
 			<label>Name</label>
@@ -528,6 +528,30 @@
 
 			<input id="submit-btn" type="submit" value="Send">
 		</form>
+
+		<script>
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get form values
+    var name = document.getElementsByName("name")[0].value;
+    var subject = document.getElementsByName("subject")[0].value;
+    var email = document.getElementsByName("email")[0].value;
+    var message = document.getElementsByName("message")[0].value;
+
+    // Create mailto URL with pre-populated values
+    var mailtoUrl = "mailto:apurva3666@gmail.com" +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent("Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message);
+
+    // Open mail client in a new window
+    window.open(mailtoUrl);
+
+    // Reset form fields
+    document.getElementById("contact-form").reset();
+});
+</script>
+
 	</div>
 </section>
 
