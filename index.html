@@ -511,7 +511,7 @@
 		<a href=""></a>
 		<h3 style="text-align: center;">Get In Touch</h3>
 
-		<form id="contact-form" >
+		<form id="contact-form">
 			<a name="contact"></a>
 
 			<label>Name</label>
@@ -530,27 +530,52 @@
 		</form>
 
 		<script>
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from submitting normally
+var form = document.getElementById("contact-form");
+var formFields = form.getElementsByClassName("input-field");
 
-    // Get form values
-    var name = document.getElementsByName("name")[0].value;
-    var subject = document.getElementsByName("subject")[0].value;
-    var email = document.getElementsByName("email")[0].value;
-    var message = document.getElementsByName("message")[0].value;
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
 
-    // Create mailto URL with pre-populated values
-    var mailtoUrl = "mailto:apurv3666@gmail.com" +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent("Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message);
+    var isFormValid = true;
+    for (var i = 0; i < formFields.length; i++) {
+        if (formFields[i].value === "") {
+            isFormValid = false;
+            formFields[i].classList.add("invalid-field");
+        } else {
+            formFields[i].classList.remove("invalid-field");
+        }
+    }
 
-    // Open mail client in a new window
-    window.open(mailtoUrl);
+    if (isFormValid) {
+        // The form is valid, proceed with sending
+        var name = document.getElementsByName("name")[0].value;
+        var subject = document.getElementsByName("subject")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+        var message = document.getElementsByName("message")[0].value;
 
-    // Reset form fields
-    document.getElementById("contact-form").reset();
+        // Create the mailto URL with pre-populated values
+        var mailtoUrl = "mailto:apurv3666@gmail.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent("Name: " + name + "\n\nEmail: " + email + "\n\nMessage: " + message);
+
+        // Open mail client in a new window
+        window.open(mailtoUrl);
+
+        // Reset the form fields
+        form.reset();
+    } else {
+        // Display an alert message to fill all fields
+        alert("Please fill out all the form fields.");
+    }
 });
 </script>
+
+		<style>
+.invalid-field {
+    border-color: red;
+}
+</style>
+
 
 	</div>
 </section>
