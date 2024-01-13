@@ -171,15 +171,16 @@ h6 { font-size: 16px;}
 	padding-bottom: 50px;
 }
 
-#profile_pic{
-	display: block;
-	margin:0 auto;
-	height: 250px;
-	width: 200px;
-	object-fit: cover;
-	border:2px solid var(--borderColor);
-	box-shadow: #192734;
-	padding:2px;
+#profile_pic {
+    display: block;
+    margin: 0 auto;
+    height: 250px;
+    width: 250px; /* Set width and height to the same value for a perfect circle */
+    object-fit: cover;
+    border: 2px solid var(--borderColor);
+    box-shadow: #192734;
+    padding: 2px;
+    border-radius: 50%;
 }
 
 
